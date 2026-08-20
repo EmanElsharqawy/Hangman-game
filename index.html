@@ -3,60 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hangman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="app.css">
-    
-    <style>
-/* The overlay (background) */
-
-</style>
-
 </head>
-
 <body>
-   
-<<div id="modal" class="modal-overlay">
-    <div class="modal-box">
-        <img src="images/lost.gif">
-
-        <h3>Game Over</h3>
-
-        <p></p>
-
-        <button class="modal-close">
-            Play Again
-        </button>
-    </div>
-</div>
-    <div class="container">
-        <div class="hungman_box">
-            <img src="images/hangman-0.svg">
-            <p>HANGEMAN GAME</p>
-        </div>
-
-        <div class="hung-guess ">
-            <div class="game_box ">
-                <ul class="hung_display">
-                    
-                </ul>
-
-                <h4 class="hint_text">
-                    hint : "The art, process, or practice of creating images by recording light or other electromagnetic radiation
-                </h4>
-
-                <h4 class="guess-text">
-                    incorrect guess :
-                    <b><span>0</span> / <span>6</span></b>
-                </h4>
-            </div>
-
-            <div class="keyword">
-               
-    
-            </div>
+    <div id="modal" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Game Over</h3>
+            <p></p>
+            <button class="modal-close">Play again</button>
         </div>
     </div>
-     <script src="wordList.js"></script>
+
+    <main class="container">
+        <aside class="hangman-side">
+            <div class="hangman-card">
+                <img src="images/hangman-0.svg" alt="">
+            </div>
+            <p class="title">hangman</p>
+        </aside>
+
+        <section class="game-side">
+            <ul class="word-display"></ul>
+
+            <div class="hint-block">
+                <p class="hint-text"></p>
+            </div>
+
+            <div class="status-row">
+                <p class="guess-text">
+                    misses <span class="wrong-count">0</span>/<span class="max-guess">6</span>
+                </p>
+                <div class="attempts-bar">
+                    <span class="attempt-segment"></span>
+                    <span class="attempt-segment"></span>
+                    <span class="attempt-segment"></span>
+                    <span class="attempt-segment"></span>
+                    <span class="attempt-segment"></span>
+                    <span class="attempt-segment"></span>
+                </div>
+            </div>
+
+            <div class="keyboard"></div>
+        </section>
+    </main>
+
+    <script src="wordList.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

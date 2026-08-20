@@ -1,10 +1,11 @@
-const hungkeyword = document.querySelector(".keyword");
-const hint_text = document.querySelector(".hint_text");
-const word_display = document.querySelector(".hung_display");
-const guessText = document.querySelector(".guess-text");
-const hungmanImag = document.querySelector(".hungman_box img");
+const keyboard = document.querySelector(".keyboard");
+const hintText = document.querySelector(".hint-text");
+const wordDisplay = document.querySelector(".word-display");
+const wrongCountEl = document.querySelector(".wrong-count");
+const maxGuessEl = document.querySelector(".max-guess");
+const attemptSegments = document.querySelectorAll(".attempt-segment");
+const hangmanImg = document.querySelector(".hangman-card img");
 const modal = document.querySelector(".modal-overlay");
-const modalImage = document.querySelector(".modal-box img");
 const modalTitle = document.querySelector(".modal-box h3");
 const modalPara = document.querySelector(".modal-box p");
 const closeBtn = document.querySelector(".modal-close");
@@ -14,82 +15,73 @@ let wrongGuessCount = 0;
 const maxGuess = 6;
 let correctLetter = [];
 
-const getRandomword = () => {
+const updateAttempts = () => {
+    attemptSegments.forEach((segment, index) => {
+        segment.classList.toggle("used", index < wrongGuessCount);
+    });
+    wrongCountEl.textContent = wrongGuessCount;
+};
+
+const getRandomWord = () => {
     const { word, hint } =
         wordList[Math.floor(Math.random() * wordList.length)];
 
     currentWord = word;
-    
     wrongGuessCount = 0;
     correctLetter = [];
 
-    hint_text.innerHTML = `Hint: ${hint}`;
+    hintText.textContent = hint;
+    maxGuessEl.textContent = maxGuess;
+    updateAttempts();
 
-    guessText.innerHTML = `
-        incorrect guess :
-        <b><span>0</span> / <span>${maxGuess}</span></b>
-    `;
+    hangmanImg.src = "images/hangman-0.svg";
 
-    hungmanImag.src = "images/hangman-0.svg";
-
-    word_display.innerHTML = word
+    wordDisplay.innerHTML = word
         .split("")
         .map(() => `<li class="letter"></li>`)
         .join("");
 
-    document.querySelectorAll(".keyword button").forEach(button => {
+    keyboard.querySelectorAll("button").forEach((button) => {
         button.disabled = false;
+        button.classList.remove("hit", "miss");
     });
 
-    modal.classList.remove("show");
+    modal.classList.remove("show", "win", "lose");
 };
 
 const gameOver = (isVictory) => {
     setTimeout(() => {
+        modal.classList.add(isVictory ? "win" : "lose");
 
-        modalImage.src = `images/${isVictory ? "victory" : "lost"}.gif`;
+        modalTitle.textContent = isVictory ? "nice one" : "too late";
 
-        modalTitle.innerText = isVictory
-            ? "Congratulations!"
-            : "Game Over!";
-
-        modalPara.innerHTML = `
-            ${isVictory ? "You found the word:" : "The correct word was:"}
-            <br>
-            <b>${currentWord.toUpperCase()}</b>
-        `;
+        modalPara.innerHTML = isVictory
+            ? `word unlocked <b>${currentWord.toUpperCase()}</b>`
+            : `answer was <b>${currentWord.toUpperCase()}</b>`;
 
         modal.classList.add("show");
-
     }, 300);
 };
 
-const initGame = (button, clickedletter) => {
-
-    if (currentWord.includes(clickedletter)) {
-
-        const letters = word_display.querySelectorAll("li");
+const initGame = (button, clickedLetter) => {
+    if (currentWord.includes(clickedLetter)) {
+        const letters = wordDisplay.querySelectorAll(".letter");
 
         [...currentWord].forEach((letter, index) => {
-
-            if (letter === clickedletter) {
+            if (letter === clickedLetter) {
                 correctLetter.push(letter);
                 letters[index].textContent = letter;
+                letters[index].classList.add("filled");
             }
-
         });
 
+        button.classList.add("hit");
     } else {
-
         wrongGuessCount++;
-        hungmanImag.src = `images/hangman-${wrongGuessCount}.svg`;
-
+        hangmanImg.src = `images/hangman-${wrongGuessCount}.svg`;
+        button.classList.add("miss");
+        updateAttempts();
     }
-
-    guessText.innerHTML = `
-        incorrect guess :
-        <b><span>${wrongGuessCount}</span> / <span>${maxGuess}</span></b>
-    `;
 
     button.disabled = true;
 
@@ -103,20 +95,17 @@ const initGame = (button, clickedletter) => {
 };
 
 for (let i = 97; i <= 122; i++) {
-
     const button = document.createElement("button");
+    const letter = String.fromCharCode(i);
 
-    button.innerText = String.fromCharCode(i);
-
-    hungkeyword.appendChild(button);
+    button.textContent = letter;
+    keyboard.appendChild(button);
 
     button.addEventListener("click", (e) => {
-        initGame(e.target, String.fromCharCode(i));
+        initGame(e.target, letter);
     });
 }
 
-closeBtn.addEventListener("click", () => {
-    getRandomword();
-});
+closeBtn.addEventListener("click", getRandomWord);
 
-getRandomword();
+getRandomWord();
