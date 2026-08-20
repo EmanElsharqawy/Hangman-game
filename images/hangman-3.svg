@@ -1,15 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="298.232" height="291" viewBox="0 0 298.232 291">
-  <g id="Group_694" data-name="Group 694" transform="translate(-219 -183)">
-    <rect id="Rectangle_2970" data-name="Rectangle 2970" width="5" height="56" rx="2.5" transform="translate(448.965 281.247) rotate(45)"/>
-    <rect id="Rectangle_2974" data-name="Rectangle 2974" width="5" height="61.733" transform="translate(310.627 183.247) rotate(45)"/>
-    <rect id="Rectangle_2966" data-name="Rectangle 2966" width="5" height="298.232" rx="2.5" transform="translate(517.232 469) rotate(90)"/>
-    <g id="Ellipse_32" data-name="Ellipse 32" transform="translate(423.5 228.247)" fill="none" stroke="#000" stroke-width="5">
-      <circle cx="27.5" cy="27.5" r="27.5" stroke="none"/>
-      <circle cx="27.5" cy="27.5" r="25" fill="none"/>
-    </g>
-    <rect id="Rectangle_2987" data-name="Rectangle 2987" width="5" height="289" rx="2.5" transform="translate(267 183)"/>
-    <rect id="Rectangle_2988" data-name="Rectangle 2988" width="187" height="5" rx="2.5" transform="translate(267 183)"/>
-    <rect id="Rectangle_2989" data-name="Rectangle 2989" width="5" height="49" rx="2.5" transform="translate(449 184)"/>
-    <rect id="Rectangle_2990" data-name="Rectangle 2990" width="5" height="73" rx="2.5" transform="translate(449 281)"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="280" viewBox="0 0 300 280" fill="none">
+  <ellipse cx="118" cy="252" rx="88" ry="7" fill="#c5d3cc" opacity="0.45"/>
+  <rect x="20" y="242" width="185" height="10" rx="5" fill="#8a9e96"/>
+  <rect x="48" y="28" width="10" height="214" rx="5" fill="#3a4a45"/>
+  <rect x="48" y="22" width="145" height="10" rx="5" fill="#3a4a45"/>
+  <circle cx="58" cy="27" r="3" fill="#7aab9e"/>
+  <circle cx="183" cy="27" r="3" fill="#7aab9e"/>
+  <path d="M188 32 L188 82" stroke="#7aab9e" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="188" cy="104" r="22" stroke="#3a4a45" stroke-width="4" fill="#f3ecea"/>
+  <line x1="188" y1="126" x2="188" y2="182" stroke="#3a4a45" stroke-width="4" stroke-linecap="round"/>
+  <line x1="188" y1="142" x2="150" y2="168" stroke="#3a4a45" stroke-width="4" stroke-linecap="round"/>
 </svg>

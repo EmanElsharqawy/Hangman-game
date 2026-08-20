@@ -1,21 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="298.232" height="291" viewBox="0 0 298.232 291">
-  <g id="Group_698" data-name="Group 698" transform="translate(-16059.232 -14400)">
-    <rect id="Rectangle_2987" data-name="Rectangle 2987" width="5" height="289" rx="2.5" transform="translate(16107.232 14400)"/>
-    <g id="Group_697" data-name="Group 697">
-      <rect id="Rectangle_2974" data-name="Rectangle 2974" width="5" height="61.733" transform="translate(16150.859 14400.247) rotate(45)"/>
-      <rect id="Rectangle_2966" data-name="Rectangle 2966" width="5" height="298.232" rx="2.5" transform="translate(16357.465 14686) rotate(90)"/>
-      <rect id="Rectangle_2988" data-name="Rectangle 2988" width="187" height="5" rx="2.5" transform="translate(16107.232 14400)"/>
-      <rect id="Rectangle_2989" data-name="Rectangle 2989" width="5" height="49" rx="2.5" transform="translate(16289.232 14401)"/>
-      <g id="Group_696" data-name="Group 696">
-        <rect id="Rectangle_2970" data-name="Rectangle 2970" width="5" height="56" rx="2.5" transform="translate(16289.197 14498.247) rotate(45)"/>
-        <rect id="Rectangle_2967" data-name="Rectangle 2967" width="5" height="56" rx="2.5" transform="translate(16291.197 14565.247) rotate(45)"/>
-        <rect id="Rectangle_2971" data-name="Rectangle 2971" width="5" height="56" rx="2.5" transform="translate(16290.732 14501.782) rotate(-45)"/>
-        <g id="Ellipse_32" data-name="Ellipse 32" transform="translate(16263.732 14445.247)" fill="none" stroke="#000" stroke-width="5">
-          <circle cx="27.5" cy="27.5" r="27.5" stroke="none"/>
-          <circle cx="27.5" cy="27.5" r="25" fill="none"/>
-        </g>
-        <rect id="Rectangle_2990" data-name="Rectangle 2990" width="5" height="73" rx="2.5" transform="translate(16289.232 14498)"/>
-      </g>
-    </g>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="280" viewBox="0 0 300 280" fill="none">
+  <ellipse cx="118" cy="252" rx="88" ry="7" fill="#c5d3cc" opacity="0.45"/>
+  <rect x="20" y="242" width="185" height="10" rx="5" fill="#8a9e96"/>
+  <rect x="48" y="28" width="10" height="214" rx="5" fill="#3a4a45"/>
+  <rect x="48" y="22" width="145" height="10" rx="5" fill="#3a4a45"/>
+  <circle cx="58" cy="27" r="3" fill="#7aab9e"/>
+  <circle cx="183" cy="27" r="3" fill="#7aab9e"/>
+  <path d="M188 32 L188 82" stroke="#7aab9e" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="188" cy="104" r="22" stroke="#3a4a45" stroke-width="4" fill="#f3ecea"/>
+  <line x1="188" y1="126" x2="188" y2="182" stroke="#3a4a45" stroke-width="4" stroke-linecap="round"/>
+  <line x1="188" y1="142" x2="150" y2="168" stroke="#3a4a45" stroke-width="4" stroke-linecap="round"/>
+  <line x1="188" y1="142" x2="226" y2="168" stroke="#3a4a45" stroke-width="4" stroke-linecap="round"/>
+  <line x1="188" y1="182" x2="158" y2="228" stroke="#3a4a45" stroke-width="4" stroke-linecap="round"/>
 </svg>

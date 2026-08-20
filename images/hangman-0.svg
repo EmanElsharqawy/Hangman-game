@@ -1,9 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="298.232" height="291" viewBox="0 0 298.232 291">
-  <g id="Group_688" data-name="Group 688" transform="translate(-219 -183)">
-    <rect id="Rectangle_2974" data-name="Rectangle 2974" width="5" height="61.733" transform="translate(310.627 183.247) rotate(45)"/>
-    <rect id="Rectangle_2966" data-name="Rectangle 2966" width="5" height="298.232" rx="2.5" transform="translate(517.232 469) rotate(90)"/>
-    <rect id="Rectangle_2987" data-name="Rectangle 2987" width="5" height="289" rx="2.5" transform="translate(267 183)"/>
-    <rect id="Rectangle_2988" data-name="Rectangle 2988" width="187" height="5" rx="2.5" transform="translate(267 183)"/>
-    <rect id="Rectangle_2989" data-name="Rectangle 2989" width="5" height="49" rx="2.5" transform="translate(449 184)"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="280" viewBox="0 0 300 280" fill="none">
+  <ellipse cx="118" cy="252" rx="88" ry="7" fill="#c5d3cc" opacity="0.45"/>
+  <rect x="20" y="242" width="185" height="10" rx="5" fill="#8a9e96"/>
+  <rect x="48" y="28" width="10" height="214" rx="5" fill="#3a4a45"/>
+  <rect x="48" y="22" width="145" height="10" rx="5" fill="#3a4a45"/>
+  <circle cx="58" cy="27" r="3" fill="#7aab9e"/>
+  <circle cx="183" cy="27" r="3" fill="#7aab9e"/>
+  <path d="M188 32 L188 72" stroke="#7aab9e" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 6"/>
+  <path d="M188 72 C188 78 194 82 200 78 C206 74 200 68 188 72" stroke="#c4a09a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
 </svg>
